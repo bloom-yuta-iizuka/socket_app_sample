@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+	<!-- ルーム情報 -->
+	<div id="room-area" class="row">
+		<div id="not-chat-area" class="controller">
+			
+			<input type="text" id="user-name" name="user-name" placeholder="ユーザ名を入力"/>
+			<input type="text" id="room-id"   name="room-id"   placeholder="参加するルームIDを入力"/>
+			<button id="join-btn"  type="button"         >参加</button>
+			<button id="leave-btn" type="button" disabled>退室</button>
+			<div>あなたのRoomID：<span id="my-room-id"></span></div>
+		
+		</div>
+		<div id="chat-area"></div>
+	</div>
+	<div id="chat-text-area" class="row">
+		<button id="send-room-btn" type="button">送信</button>
+		<textarea id="chat-text-form" name="chat-text" class="controller" placeholder="チャット内容を入力"></textarea>
+	</div>
+{% endblock %}
+
+{% block script %}
+	<script src="{{url_for('static',filename='js/index/init.js')}}"></script>
+{% endblock %}
