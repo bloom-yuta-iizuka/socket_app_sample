@@ -21,6 +21,7 @@
 	});
 
 	//room-idを初期化
+	//なんちゃってRoomIDなので、重複する可能性は充分にある。あくまでも、デモ用
 	$("#my-room-id").text(String(Math.random()).slice(2,12));
 
 	let user_name_form = $("#user-name");
@@ -65,4 +66,3 @@
 		send_room(room_id,{msg:chat_text,user_name:user_name})
 		chat_text_form.val("");
 	});
-
